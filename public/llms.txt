@@ -1,0 +1,20 @@
+# Nzrv Blog
+
+> Personal blog about Software Engineering and DevOps by Petr Nazarov.
+
+## About
+
+This blog contains notes and articles about software engineering, DevOps practices, containerization, orchestration, and related topics.
+
+## Author
+
+- Name: Petr Nazarov
+- Role: Software Architect & DevOps Engineer
+- Website: https://cv.nzrv.dev
+- GitHub: https://github.com/petr-nazarov
+
+## Links
+
+- Blog: https://blog.nzrv.com
+- RSS: https://blog.nzrv.com/rss.xml
+- Sitemap: https://blog.nzrv.com/sitemap-index.xml

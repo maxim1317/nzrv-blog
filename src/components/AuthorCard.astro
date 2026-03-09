@@ -3,18 +3,24 @@ import { AUTHOR } from "../consts";
 ---
 
 <aside class="mt-12 pt-8 border-t border-gray-200">
-  <a href={AUTHOR.url} class="flex items-center gap-4 group">
-    <img
-      src={AUTHOR.avatar}
-      alt={AUTHOR.name}
-      width="48"
-      height="48"
-      class="rounded-full"
-      loading="lazy"
-    />
-    <div>
-      <p class="font-semibold group-hover:underline">{AUTHOR.name}</p>
-      <p class="text-sm text-gray-500">{AUTHOR.title}</p>
-    </div>
-  </a>
+  <div class="flex items-center justify-between">
+    <a href={AUTHOR.url} class="flex items-center gap-4 group" target="_blank" rel="noopener noreferrer">
+      <img
+        src={AUTHOR.avatar}
+        alt={AUTHOR.name}
+        width="48"
+        height="48"
+        class="rounded-full"
+        loading="lazy"
+      />
+      <div>
+        <p class="font-semibold group-hover:underline">{AUTHOR.name}</p>
+        <p class="text-sm text-gray-500">{AUTHOR.title}</p>
+      </div>
+    </a>
+    <a href={`mailto:${AUTHOR.mail}`} class="text-sm text-gray-500 hover:text-gray-900 transition-colors flex items-center gap-1.5" target="_blank" rel="noopener noreferrer">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+      Contact me
+    </a>
+  </div>
 </aside>

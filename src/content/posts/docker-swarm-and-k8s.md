@@ -1,6 +1,6 @@
 ---
-title: "Docker guides and best practices"
-description: "A rant about Docker in practice: from builds to deployment"
+title: "A rant about Docker, Swarm and K8S"
+description: "This is a summary of a lecture I gave on: A practical guide to Docker image optimization, multi-stage builds, Docker Compose, deployment strategies, and when (not) to use Kubernetes"
 date: 2026-03-09
 tags: ["docker", "devops", "docker swarm", "kubernetes"]
 ---

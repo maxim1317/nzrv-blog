@@ -25,15 +25,9 @@ const jsonLd = JSON.stringify({
   description,
   datePublished: date.toISOString(),
   url: articleUrl,
-  author: {
-    "@type": "Person",
-    name: AUTHOR.name,
-    url: AUTHOR.url,
-  },
-  publisher: {
-    "@type": "Organization",
-    name: SITE.title,
-  },
+  author: { "@id": `${SITE.url}/#person` },
+  publisher: { "@id": `${SITE.url}/#person` },
+  isPartOf: { "@id": `${SITE.url}/#website` },
   ...(tags && { keywords: tags.join(", ") }),
 });
 ---
@@ -90,4 +84,26 @@ const jsonLd = JSON.stringify({
 
     <AuthorCard />
   </article>
+
+  <section class="mt-12 pt-8 border-t border-gray-200" aria-label="Comments">
+    <h2 class="text-lg font-semibold mb-6">Comments</h2>
+    <div class="giscus"></div>
+    <script
+      is:inline
+      src="https://giscus.app/client.js"
+      data-repo="petr-nazarov/blog"
+      data-repo-id="R_kgDORig9fg"
+      data-category="General"
+      data-category-id="DIC_kwDORig9fs4C4Btq"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="preferred_color_scheme"
+      data-lang="en"
+      crossorigin="anonymous"
+      async
+    ></script>
+  </section>
 </Base>

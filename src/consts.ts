@@ -3,7 +3,6 @@ export const SITE = {
   description: "My notes about about Software Engineering and DevOps",
   url: "https://blog.nzrv.com",
   lang: "en",
-  gaId: "G-8MQCGC6T54",
 };
 
 export const AUTHOR = {

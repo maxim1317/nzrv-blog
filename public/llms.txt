@@ -15,6 +15,6 @@ This blog contains notes and articles about software engineering, DevOps practic
 
 ## Links
 
-- Blog: https://blog.nzrv.com
-- RSS: https://blog.nzrv.com/rss.xml
-- Sitemap: https://blog.nzrv.com/sitemap-index.xml
+- Blog: https://blog.nzrv.dev
+- RSS: https://blog.nzrv.dev/rss.xml
+- Sitemap: https://blog.nzrv.dev/sitemap-index.xml

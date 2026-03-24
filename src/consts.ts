@@ -1,7 +1,7 @@
 export const SITE = {
   title: "Nzrv Blog",
   description: "My notes about about Software Engineering and DevOps",
-  url: "https://blog.nzrv.com",
+  url: "https://blog.nzrv.dev",
   lang: "en",
 };
 

@@ -9,7 +9,7 @@ export const AUTHOR = {
   name: "Petr Nazarov",
   title: "Software Architect & DevOps Engineer",
   avatar: "https://cv.nzrv.dev/profile_crop.jpg",
-  url: "https://cv.nzrv.dev",
-  github: "https://github.com/petr-nazarov",
+  url: "https://cv.nzrv.dev/?utm_campaign=main&utm_medium=owned-paltforms&utm_source=blog.nzrv.dev",
+  github: "https://github.com/petr-nazarov?utm_source=blog&utm_medium=web",
   mail: "mailto:info@nzrv.dev"
 };

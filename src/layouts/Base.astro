@@ -24,6 +24,8 @@ const {
 } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, SITE.url);
+const slug = Astro.url.pathname.replace(/^\/|\/$/g, "") || "home";
+const authorUrl = `${AUTHOR.url}&utm_content=${slug}`;
 const pageTitle = title === SITE.title ? title : `${title} — ${SITE.title}`;
 
 const siteSchema = JSON.stringify({
@@ -114,7 +116,7 @@ const siteSchema = JSON.stringify({
             </a>
           </li>
           <li>
-            <a href={AUTHOR.url} class="text-gray-400 hover:text-gray-900 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="CV" title="CV">
+            <a href={authorUrl} class="text-gray-400 hover:text-gray-900 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="CV" title="CV">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </a>
           </li>

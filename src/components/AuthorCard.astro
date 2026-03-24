@@ -1,10 +1,12 @@
 ---
 import { AUTHOR } from "../consts";
+const slug = Astro.url.pathname.replace(/^\/|\/$/g, "") || "home";
+const authorUrl = `${AUTHOR.url}&utm_content=${slug}`;
 ---
 
 <aside class="mt-12 pt-8 border-t border-gray-200">
   <div class="flex items-center justify-between">
-    <a href={AUTHOR.url} class="flex items-center gap-4 group" target="_blank" rel="noopener noreferrer">
+    <a href={authorUrl} class="flex items-center gap-4 group" target="_blank" rel="noopener noreferrer">
       <img
         src={AUTHOR.avatar}
         alt={AUTHOR.name}

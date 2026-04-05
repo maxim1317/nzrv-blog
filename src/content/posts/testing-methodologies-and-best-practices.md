@@ -25,6 +25,10 @@ A unit test verifies a single function in isolation. Everything around it — de
 ```typescript
 // Example: testing a createProvider function with Vitest
 describe("createProvider", () => {
+  it("should return null when no provider specified", () => {
+    expect(createProvider({})).toBeNull();
+  });
+
   it('should thorow on invalid string provider', async () => {
     await expect(
       createProvider({ provider: 'invalid' as any, apiKey: 'key' })

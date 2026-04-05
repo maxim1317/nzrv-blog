@@ -29,9 +29,11 @@ describe("createProvider", () => {
     expect(createProvider({})).toBeNull();
   });
 
-  it("should throw when given invalid options", () => {
-    expect(() => createProvider({ provider: "" })).toThrow();
-  });
+  it('should thorow on invalid string provider', async () => {
+    await expect(
+      createProvider({ provider: 'invalid' as any, apiKey: 'key' })
+    ).rejects.toThrow('Unknown provider "invalid"')
+  })
 });
 ```
 
@@ -165,7 +167,7 @@ For monorepos, you can get clever and build a dependency graph so you only run t
 Coverage tells you what percentage of your code is actually exercised by tests. It's useful for finding blind spots — functions or branches that nobody wrote tests for.
 
 ```bash
-npm run test -- --coverage
+npx vitest run --coverage
 ```
 
 The problem is that coverage is a terrible quality metric on its own. You can literally import a function, write `assert 0 === 0`, and the coverage number goes up. Management loves seeing 90% coverage. It means almost nothing without looking at what the tests actually check.
@@ -177,7 +179,7 @@ This is where mutation testing helps. **[Stryker](https://stryker-mutator.io)** 
 If you replace a function body with `undefined` and no test fails, that's a problem.
 
 ```bash
-npm run test:mutation
+npx stryker run
 ```
 
 Stryker generates a report showing:

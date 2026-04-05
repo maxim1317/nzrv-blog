@@ -16,7 +16,7 @@ You ship a feature, bump some dependencies, swap Stripe for another payment proc
 
 ## The Testing Pyramid: Types of Tests
 
-![Testing scopes from unit tests to end-to-end](../assests/images/test-scopes.png)
+![Testing scopes from unit tests to end-to-end](../assets/images/test-scopes.png)
 
 ### Unit Tests
 

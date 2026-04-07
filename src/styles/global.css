@@ -29,7 +29,8 @@
   header:has(nav),
   footer,
   #toc-sidebar,
-  .toc-mobile {
+  .toc-mobile,
+  #search-modal {
     display: none !important;
   }
 

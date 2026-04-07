@@ -131,9 +131,16 @@ import Search from "astro-pagefind/components/Search";
       selectedIndex = -1;
     }
 
+    function isEditableTarget(target: EventTarget | null): boolean {
+      if (target instanceof HTMLElement) {
+        return target.isContentEditable || target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement;
+      }
+      return false;
+    }
+
     // Global keyboard shortcuts
     document.addEventListener("keydown", (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+      if (((e.metaKey || e.ctrlKey) && e.key === "k") || (e.key === "/" && !isEditableTarget(e.target))) {
         e.preventDefault();
         if (modal.classList.contains("hidden")) {
           open();

@@ -112,15 +112,15 @@ const siteSchema = JSON.stringify({
         <a href="/" class="text-lg font-semibold hover:underline shrink-0">{SITE.title}</a>
         <button
           id="search-trigger"
-          class="hidden sm:flex items-center gap-2 flex-1 max-w-xs border border-gray-200 rounded-lg px-3 py-1.5 text-sm text-gray-400 hover:border-gray-300 hover:text-gray-500 transition-colors cursor-pointer"
+          class="flex items-center gap-2 flex-1 max-w-xs border border-gray-200 rounded-lg px-3 py-1.5 text-sm text-gray-400 hover:border-gray-300 hover:text-gray-500 transition-colors cursor-pointer"
           aria-label="Search posts"
         >
           <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/>
             <path d="M21 21l-4.35-4.35"/>
           </svg>
-          <span class="flex-1 text-left">Search posts...</span>
-          <kbd class="text-xs border border-gray-200 rounded px-1.5 py-0.5 font-sans">⌘K</kbd>
+          <span class="hidden sm:inline flex-1 text-left">Search posts...</span>
+          <kbd class="hidden sm:inline text-xs border border-gray-200 rounded px-1.5 py-0.5 font-sans">⌘K</kbd>
         </button>
         <ul class="flex items-center gap-4">
           <li>
